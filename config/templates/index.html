@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+    <center>
+    <h1>{{apresentacao}}</h1>
+    <h3>{{boas_vindas}}</h3>
+    <p><a href="http://127.0.0.1:5000/about">Sobre Mim</a></p>
+    </center>
+    <br>
+    <br>
+    <h4>{{texto1}}</h4>
+    <br>
+    <br>
+    <form action="/" method="post">
+        <h3>Escreva seu nome:</h3>
+        <input name="name" placeholder="Nome">
+        <br>
+        <h3>Escreva seu sobrenome:</h3>
+        <input name="surname" placeholder="Sobrenome">
+        <br>
+        <h3>Digite seu email:</h3>
+        <input name="email" placeholder="Email">
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+    {% for pessoa in pessoas %}
+    <div>{{ pessoa[1] + '  ' + pessoa[2] + ' / ' + pessoa[3] }}</div>
+    <h4>{{cadastro}}</h4>
+    {% endfor %}
+
+</body>
+</html>
